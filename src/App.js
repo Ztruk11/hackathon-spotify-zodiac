@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import Fetch from "./Fetch";
-import Sprite from "./Sprite";
+// import Sprite from "./Sprite";
 import axios from "axios";
 
 import {
@@ -49,9 +49,12 @@ class App extends Component {
 
   render() {
     return (
+      <div className="stars">
+      <div className="twinkling">
+      <div className="clouds">
       <div className="container">
         <div className="page-header">
-          <h1>Spotify Zodiac</h1>
+          <h1 className="text-muted">Horoscope</h1>
         </div>
         <div className="row">
           <div className="col-md-4">
@@ -99,9 +102,11 @@ class App extends Component {
           <Fetch url={this.state.url} getMood={this.getMood} />
         </div>
         <div>
-           <Sprite mood={this.state.mood}/> 
+           {/* <Sprite mood={this.state.mood}/>  */}
         </div>
-        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+      </div>
+      </div>
+      </div>
       </div>
     );
   }

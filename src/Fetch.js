@@ -27,8 +27,8 @@ class Fetch extends Component {
       .then(response => response.data)
       .then(json => this.setState({ json }));
 
-    var dataFromChild = this.state.json.mood;
-    this.props.getMood(dataFromChild);
+    // var dataFromChild = this.state.json.mood;
+    // this.props.getMood(dataFromChild);
   }
 
   render() {
@@ -36,16 +36,15 @@ class Fetch extends Component {
       <div className="col-md-8">
         <div className="panel panel-default">
           <div className="panel-heading">Here's your horoscope!</div>
-          <div>
-            <br />
-            Current Date: {this.state.json.current_date} <br />
-            Compatibility: {this.state.json.compatibility} <br />
-            Lucky Number: {this.state.json.lucky_number} <br />
-            Lucky Time: {this.state.json.lucky_time} <br />
-            Color: {this.state.json.color} <br />
-            Date Range: {this.state.json.date_range} <br />
-            Mood: {this.state.json.mood} <br />
-            Description: {this.state.json.description} <br />
+          <div className="panel-body">
+            <p><strong>Current Date:  </strong>{this.state.json.current_date}</p>
+            <p><strong>Compatibility:  </strong> {this.state.json.compatibility}</p>
+            <p><strong>Lucky Number:  </strong>{this.state.json.lucky_number}</p>
+            <p><strong>Lucky Time:  </strong>{this.state.json.lucky_time}</p>
+            <p><strong>Color:  </strong> {this.state.json.color}</p>
+            <p><strong>Date Range:  </strong> {this.state.json.date_range}</p>
+            <p><strong>Mood:  </strong>{this.state.json.mood}</p>
+            <p><strong>Description:  </strong>{this.state.json.description}</p>
           </div>
         </div>
       </div>
